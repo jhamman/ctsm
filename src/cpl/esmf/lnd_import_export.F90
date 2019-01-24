@@ -5,14 +5,12 @@ module lnd_import_export
   use ESMF                  , only : ESMF_LogWrite, ESMF_LOGMSG_ERROR, ESMF_LogFoundError
   use ESMF                  , only : ESMF_STATEITEM_NOTFOUND, ESMF_StateItem_Flag
   use ESMF                  , only : operator(/=), operator(==)
-  use NUOPC                 , only : NUOPC_CompAttributeGet, NUOPC_Advertise, NUOPC_IsConnected
-! !   use NUOPC_Model           , only : NUOPC_ModelGet
+
   use shr_kind_mod          , only : r8 => shr_kind_r8, cx=>shr_kind_cx, cxx=>shr_kind_cxx
   use shr_infnan_mod        , only : isnan => shr_infnan_isnan
   use shr_string_mod        , only : shr_string_listGetName, shr_string_listGetNum
   use shr_sys_mod           , only : shr_sys_abort
-! !   use shr_nuopc_methods_mod , only : shr_nuopc_methods_chkerr
-!   use shr_nuopc_scalars_mod , only : flds_scalar_name, flds_scalar_num
+
   use clm_varctl            , only : iulog
   use clm_time_manager      , only : get_nstep
   use decompmod             , only : bounds_type
